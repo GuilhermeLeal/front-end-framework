@@ -1,10 +1,5 @@
 # Projeto-TMDB
 
-## Como rodar
-
-- Instalar dependencias: **npm install**
-- Iniciar projeto: ng serve --open
-
 ## Descrição do projeto
 
 ### Componentes
