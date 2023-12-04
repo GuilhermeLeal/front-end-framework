@@ -1,0 +1,15 @@
+<div class="container ">
+  <h1 class="text-center">Lista de Filmes</h1>
+  <div class="movie-list">
+    <ng-container *ngFor="let movie of movies | paginate: { itemsPerPage: 8, currentPage: currentPage }">
+      <div class="movie-item">
+        <a (click)="navigateToMovieWithQueryParams(movie.id)">
+          <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }}">
+        </a>
+      </div>
+    </ng-container>
+  </div>
+  <div class="d-flex justify-content-center mt-3">
+    <pagination-controls class="pagination-lg" (pageChange)="pageChanged($event)"></pagination-controls>
+  </div>
+</div>

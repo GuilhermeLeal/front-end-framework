@@ -1,0 +1,21 @@
+<div *ngIf="movieDetails" class="container ">
+  <h2 class="text-center ">{{ movieDetails.title | uppercase }}</h2>
+
+  <div class="row mt-4">
+    <div class="col-md-4">
+      <img *ngIf="movieDetails.poster_path" [src]="'https://image.tmdb.org/t/p/w500' + movieDetails.poster_path" class="img-fluid" alt="Movie Poster">
+    </div>
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body">
+          <p *ngIf="movieDetails.overview"><strong>Sinopse:</strong> {{ movieDetails.overview }}</p>
+          <p *ngIf="movieDetails.release_date"><strong>Data de lançamento:</strong> {{ movieDetails.release_date | date: 'longDate' }}</p>
+          <p *ngIf="movieDetails.popularity !== undefined"><strong>Popularidade:</strong> {{ movieDetails.popularity }}</p>
+          <p *ngIf="movieDetails.vote_average !== undefined"><strong>Nota média:</strong> {{ movieDetails.vote_average }}</p>
+          <p *ngIf="movieDetails.original_language !== undefined"><strong>Lingua nativa:</strong> {{ movieDetails.original_language }}</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

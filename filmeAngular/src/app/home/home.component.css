@@ -1,0 +1,11 @@
+.button-style {
+  min-width: 220px;
+  text-align: center;  
+  background-color: rgb(65, 65, 65);
+  color: white;
+  
+}
+
+.button-style:hover{
+  color: black;
+}
